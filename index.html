@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Finance Tracker</h1>
+    <form id="transaction-form">
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description">
+        <button type="submit">Add Transaction</button>
+    </form>
+
+    <h2>Summary</h2>
+    <p>Total Income: <span id="total-income">$0</span></p>
+    <p>Total Expense: <span id="total-expense">$0</span></p>
+
+    <h2>Transactions</h2>
+    <ul id="transaction-list"></ul>
+
+    <script>
+        document.getElementById('transaction-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            fetch('/add-transaction', {
+                method: 'POST',
+                body: new URLSearchParams(formData)
+            }).then(response => response.text())
+              .then(data => {
+                  alert(data);
+                  loadTransactions();
+                  loadSummary();
+                  this.reset();
+              });
+        });
+
+        function loadTransactions() {
+            fetch('/transactions')
+                .then(response => response.json())
+                .then(data => {
+                    const transactionList = document.getElementById('transaction-list');
+                    transactionList.innerHTML = '';
+                    data.forEach(transaction => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `${transaction.type}: $${transaction.amount} - ${transaction.description} (${transaction.date})`;
+                        transactionList.appendChild(listItem);
+                    });
+                });
+        }
+
+        function loadSummary() {
+            fetch('/summary')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('total-income').textContent = `$${data.totalIncome}`;
+                    document.getElementById('total-expense').textContent = `$${data.totalExpense}`;
+                });
+        }
+
+        loadTransactions();
+        loadSummary();
+    </script>
+</body>
+</html>
+

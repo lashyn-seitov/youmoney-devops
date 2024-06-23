@@ -1,0 +1,6 @@
+# Исключаем node_modules и другие ненужные файлы
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
+
