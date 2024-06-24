@@ -79,5 +79,5 @@
  - .dockerignore # Файлы, которые следует игнорировать при сборке Docker
  - index.html # Главная страница HTML
  - style.css  # Стили
- - project.json # Содержит метаданные проекта Node.js
- - project-lock.json # Содержит зависимости Node.js
+ - package.json # Содержит метаданные проекта Node.js
+ - package-lock.json # Содержит зависимости Node.js
