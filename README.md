@@ -75,8 +75,9 @@
 
 ## Структура проекта
  - server.js # Конфигурационный файл сервера Node.js
- - package.json # Зависимости и скрипты Node.js
  - Dockerfile # Конфигурационный файл Docker
  - .dockerignore # Файлы, которые следует игнорировать при сборке Docker
  - index.html # Главная страница HTML
  - style.css  # Стили
+ - project.json # Содержит метаданные проекта Node.js
+ - project-lock.json # Содержит зависимости Node.js
