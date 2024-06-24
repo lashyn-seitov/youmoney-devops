@@ -7,7 +7,7 @@ const port = 3000;
 
 // Настройка подключения к базе данных
 const db = mysql.createConnection({
-    host: '10.10.116.102',
+    host: 'rds-1.cv6sec244rco.eu-west-1.rds.amazonaws.com',
     user: 'test', // замените на ваш MySQL логин
     password: 'password', // замените на ваш MySQL пароль
     database: 'finance_tracker'
