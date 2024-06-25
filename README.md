@@ -5,7 +5,7 @@
 
 ## Архитектура приложения Finance Tracker
 <p style="text-align: center;">
-  <img src="https://github.com/lashyn-seitov/youmoney-devops/blob/main/AWS-39-1.png" style="display: block; margin: auto; max-width: 100%;">
+  <img src="https://github.com/lashyn-seitov/youmoney-devops/blob/main/docs/diagrams/AWS-39-1.png" style="display: block; margin: auto; max-width: 100%;">
 </p>
 
 ## Содержание
