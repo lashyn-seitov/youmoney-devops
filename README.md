@@ -5,12 +5,12 @@
 
 ## Архитектура приложения Finance Tracker
 <p align="center">
-  <img width="2908" height="1322" src="https://github.com/lashyn-seitov/youmoney-devops/blob/main/AWS-39-1.png">
+  <img width="2908" height="900" src="https://github.com/lashyn-seitov/youmoney-devops/blob/main/AWS-39-1.png">
 </p>
 
 ## Содержание
 - [Введение](#введение)
-- [Архитектура приложения Finance Tracker](#архитектура приложения Finance Tracker])
+- [Архитектура приложения Finance Tracker](#архитектура приложения Finance Tracker)
 - [Функции](#функции)
 - [Технологии](#технологии)
 - [Установка](#установка)
