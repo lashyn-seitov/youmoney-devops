@@ -3,13 +3,14 @@
 ## Введение
 Это простое приложение для подсчета ваших финансовых расходов и доходов, построенное с использованием **HTML**, **CSS**, **Node.js** и **MySQL**. Приложение позволяет пользователям добавлять, просматривать и суммировать финансовые транзакции.
 
-## Структура приложения Finance Tracker
+## Архитектура приложения Finance Tracker
 <p align="center">
-  <img width="2908" height="1322" src="https://github.com/blademoon/Markdown/blob/main/Picture/cat.jpg">
+  <img width="2908" height="1322" src="https://github.com/lashyn-seitov/youmoney-devops/blob/main/AWS-39-1.png">
 </p>
 
 ## Содержание
 - [Введение](#введение)
+- [Архитектура приложения Finance Tracker](#архитектура приложения Finance Tracker])
 - [Функции](#функции)
 - [Технологии](#технологии)
 - [Установка](#установка)
